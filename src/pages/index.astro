@@ -1,0 +1,115 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.tsx';
+
+const aulas = [
+  {
+    nome: 'boxe',
+    img: '/images/box.jpg',
+    horarios: ['terça: 8:30h', 'quinta: 8:30h'],
+  },
+  {
+    nome: 'jiu jitsu',
+    img: '/images/jiujitsu.jpg',
+    horarios: ['terça: 20h', 'terça (kids): 19h', 'quinta: 20h', 'quinta (kids): 19h']
+  },
+  {
+    nome: 'muay thai',
+    img: '/images/muaythai.jpg',
+    horarios: [
+      'segunda: 18h/19h', 'terça: 8h/19h', 'terça (kids): 18h', 'quarta: 18h',
+      'quinta: 8h/19h', 'quinta (kids): 18h', 'sexta: 8:30h/18h/19h'
+    ]
+  },
+  {
+    nome: 'luta livre',
+    img: '/images/lutalivre.jpg',
+    horarios: ['segunda: 20h', 'quarta: 20h'],
+  }
+]
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="min-h-full text-white">
+    <section>
+      <div class="relative">
+        <Image src="/images/background_1.jpg" alt="background" width="429" height="286" class="w-full blur-[1.2px]" />
+        <div class="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center gap-4 text-white">
+          <h1 class="text-white text-5xl lato-regular">
+            CMT 12
+          </h1> 
+          <h2 class="lato-regular">
+            A MELHOR ESCOLA DE LUTAS DA REGIÃO
+          </h2>
+        </div>
+      </div>
+      <div class="text-center pt-10 px-5">
+        <h2 class="text-[32px] mb-4 lato-light">BEM VINDO A CMT 12</h2>
+        <p class="lato-regular">
+        A CMT12 foi criada pelo Mestre Clayton Mangueira.
+ Aqui você aprende e  mantém seu condicionamento físico no Boxe, Muay Thai, MMA, Luta Livre,  Luta Olímpica e Jiu Jitsu.
+        </p>
+      </div>
+    </section>
+    <div class="main-content px-5 pt-16 space-y-16">
+      <section class="space-y-8">
+        <h2>NOSSOS TREINOS</h2>
+        {aulas.map(aula => (
+          <Card title={aula.nome} href={aula.nome} img={aula.img}>
+            <div class="flex flex-col gap-8">
+              {aula.horarios.map(horario => (
+                <span 
+                class="text-2xl capitalize 
+                lato-light 
+                py-4
+                rounded-lg 
+                border
+                border-solid 
+                border-white">
+                  {horario}
+                </span>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </section>
+      <section>
+        <h2>NOSSA EQUIPE</h2>
+        <Card href="/equipe" img="/images/equipe.jpg">
+          <div class="text-lg space-y-2 lato-regular">
+            <p>
+            Conheça a nossa equipe. Alunos, professores, mestres, faixas pretas e futuras promessas.
+            </p>
+            <p>
+            Aqui você encontra um resumo sobre cada professor, mestre e faixa preta.
+            </p>
+          </div>
+        </Card>
+      </section>
+      <section>
+        <h2>NOSSO MESTRE</h2>
+        <Card title="Clayton Mangueira" href="/equipe" img="/images/mestre.jpg">
+          <div class="text-lg space-y-2 lato-regular">
+            <p>
+            Carlos Clayton Araújo de Souza é o nome dele. O apelido "Mangueira" veio após um projeto social no bairro homônimo, na cidade do Rio de Janeiro, onde lecionava artes marciais para crianças carentes da região.
+            </p>
+          </div>
+        </Card>
+      </section>
+    </div>
+	</main>
+</Layout>
+
+<style>
+  .main-content section {
+    text-align: center;
+  }
+
+  .main-content section h2 {
+    font-size: 32px;
+    font-family: 'Lato';
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+</style>
