@@ -37,7 +37,7 @@ function CustomCard({ title, href, img, children }: CustomCardProps) {
         {children} 
       </CardContent>
       <CardFooter className="flex justify-center mt-8">
-        <a href={href} className="underline">SAIBA MAIS</a>
+        <a href={href.replace(/\s/g, '')} className="underline">SAIBA MAIS</a>
       </CardFooter>
     </Card>
   )
