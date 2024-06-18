@@ -4,11 +4,19 @@ const {title, img, imgAlt} = Astro.props;
 ---
 
 <div>
-  <div class="bg-primary flex flex-col lg:flex-row items-center mb-8">
-    <img class="w-full blur-[1px]" src={img} alt={imgAlt} />
+  <div class="bg-primary flex flex-col items-center mb-8">
+    <img class="w-full" src={img} alt={imgAlt} />
     <h1 class="text-6xl text-center text-white uppercase py-4 lato-regular">{title}</h1>
   </div>
-  <div class="px-6 text-white">
+  <div class="content px-6 text-white">
     <slot/>
   </div>
 </div>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+</style>
