@@ -1,0 +1,65 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import InfoPage from '../layouts/InfoPage.astro';
+import ImageCarousel from '../components/ImageCarousel.tsx';
+---
+
+<Layout title="O Mestre">
+  <InfoPage title="O Mestre" img="/images/mestre-2.jpg" imgAlt="O mestre Clayton Mangueira">
+    <section>
+      <h2 class="text-4xl mb-6">Carlos Clayton Araújo de Souza</h2>
+      <p>
+        Este é o nome dele. O apelido "Mangueira" veio após um projeto social no bairro homônimo, na cidade do Rio de Janeiro, onde lecionava artes marciais para diversas crianças carentes da região. O saudoso Grão Mestre Luiz Alves “In Memoriam” sempre o chamava de “Mangueira” quando chegava para treinar na academia BUDOKAN, fixando então, o apelido. Nascido na década de 70, na maternidade Carmela Dutra na cidade do Rio de Janeiro.
+      </p>
+    </section>
+    <section>
+      <h3 class="text-2xl mb-4">
+        Por que o número 12?
+      </h3>
+      <p>
+        O número surgiu na criação da equipe Clayton Mangueira Team, em 1998.
+        A letra M foi incluída na sua insígnia CMT12 em seus uniformes de competição.
+        O número 12 equivale à posição da letra M no alfabeto.
+      </p>
+    </section>
+    <section>
+      <h3 class="text-2xl mb-4">
+        Participações na TV/Cinema 
+      </h3>
+      <ul class="space-y-1 list-disc list-inside">
+        <li>
+          Seriado Bom de Briga - Canal Space
+        </li>
+        <li>
+          Documentário O Infiltrado no MMA - Canal History Channel
+        </li>
+        <li>
+          Filme Tropa de Elite - 2007
+        </li>
+        <li>
+          Novela Orgulho e Paixão - Tv Globo
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="text-2xl mb-4">
+        Titulos
+      </h3>
+      <p>(a fazer)</p>
+    </section>
+    <section>
+      <h3 class="text-2xl mb-4">
+        Podiums
+      </h3>
+      <ImageCarousel 
+        imgs={[
+          '/images/podium_cbjj_2018.jpeg',
+          '/images/podium_cbjj_2019.jpeg',
+          '/images/podium_cbjj_2022.jpeg'
+        ]} 
+        client:load
+      />
+    </section>
+  </InfoPage> 
+</Layout>
