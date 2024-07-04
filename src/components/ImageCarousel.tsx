@@ -6,6 +6,11 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger
+} from '@/components/ui/dialog';
 
 interface CustomCarouselProps {
   imgs: string[];
@@ -17,7 +22,14 @@ function ImageCoursel({ imgs }: CustomCarouselProps) {
       <CarouselContent>
         {imgs.map((img, index) => (
           <CarouselItem key={index}>
-            <img src={img} />
+            <Dialog>
+              <DialogTrigger>
+                <img src={img} />
+              </DialogTrigger>
+              <DialogContent className="p-0 border-none">
+                <img src={img} />
+              </DialogContent>
+            </Dialog>
           </CarouselItem>
         ))} 
       </CarouselContent>
