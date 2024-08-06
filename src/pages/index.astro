@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.tsx';
+import LocationTabs from '@/components/LocationTabs.tsx';
 
 const aulas = [
   {
@@ -95,6 +96,10 @@ const aulas = [
             </p>
           </div>
         </Card>
+      </section>
+      <section>
+        <h2>Localização</h2>
+        <LocationTabs client:load/>
       </section>
     </div>
 	</main>
