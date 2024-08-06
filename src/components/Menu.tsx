@@ -14,32 +14,32 @@ function Menu() {
         <nav>
           <ul className="uppercase">
             <NavItem>
-              <a href="/equipe" className="underline">
+              <a href="/equipe">
                 A equipe 
               </a>
             </NavItem>
             <NavItem>
-              <a href="/o-mestre" className="underline">
+              <a href="/o-mestre">
                 O mestre 
               </a>
             </NavItem>
             <NavItem>
-              <a href="/boxe" className="underline">
+              <a href="/boxe">
                 Boxe 
               </a>
             </NavItem>
             <NavItem>
-              <a href="/muaythai" className="underline">
+              <a href="/muaythai">
                 Muay Thai 
               </a>
             </NavItem>
             <NavItem>
-              <a href="/jiujitsu" className="underline">
+              <a href="/jiujitsu">
                 Jiu Jitse 
               </a>
             </NavItem>
             <NavItem>
-              <a href="/lutalivre" className="underline">
+              <a href="/lutalivre">
                 Luta Livre 
               </a>
             </NavItem>
