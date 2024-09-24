@@ -1,8 +1,9 @@
-
 ---
 import Layout from '../layouts/Layout.astro';
 import InfoPage from '../layouts/InfoPage.astro';
 import ImageCarousel from '../components/ImageCarousel.tsx';
+import TitleList from '@/components/TitleList.tsx';
+import titulos from '@/data/titulos.json';
 ---
 
 <Layout title="O Mestre">
@@ -46,7 +47,17 @@ import ImageCarousel from '../components/ImageCarousel.tsx';
       <h3 class="text-2xl mb-4">
         Titulos
       </h3>
-      <p>(a fazer)</p>
+      <ul class="space-y-2">
+        {Object.keys(titulos).map(federation => (
+          <li>
+            <TitleList 
+              federation={federation} 
+              titles={titulos[federation]} 
+              client:load
+            />
+          </li>)
+        )}
+      </ul>
     </section>
     <section>
       <h3 class="text-2xl mb-4">
