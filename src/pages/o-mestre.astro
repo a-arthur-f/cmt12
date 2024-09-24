@@ -3,7 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import InfoPage from '../layouts/InfoPage.astro';
 import ImageCarousel from '../components/ImageCarousel.tsx';
 import TitleList from '@/components/TitleList.tsx';
-import titulos from '@/data/titulos.json';
+import type { Title } from '@/components/TitleList.tsx';
+import titulosJson from '@/data/titulos.json';
+
+const titulos: { [key: string]: Title[] } = titulosJson;
 ---
 
 <Layout title="O Mestre">

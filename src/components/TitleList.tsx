@@ -6,7 +6,7 @@ interface TitleListProps {
   titles: Title[];
 }
 
-interface Title {
+export interface Title {
   campeonato: string;
   data: string;
   divisaoPeso: string;
