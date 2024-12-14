@@ -1,8 +1,15 @@
 import {
   Drawer,
   DrawerTrigger,
-  DrawerContent,
+  DrawerContent
 } from '@/components/ui/drawer';
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from '@/components/ui/accordion';
 
 function Menu() {
   return (
@@ -24,24 +31,35 @@ function Menu() {
               </a>
             </NavItem>
             <NavItem>
-              <a href="/boxe">
-                Boxe 
-              </a>
-            </NavItem>
-            <NavItem>
-              <a href="/muaythai">
-                Muay Thai 
-              </a>
-            </NavItem>
-            <NavItem>
-              <a href="/jiujitsu">
-                Jiu Jitse 
-              </a>
-            </NavItem>
-            <NavItem>
-              <a href="/lutalivre">
-                Luta Livre 
-              </a>
+              <Accordion type="single" collapsible className="border-none">
+                <AccordionItem value="treinos" className="border-none">
+                  <AccordionTrigger className="p-0 uppercase">Treinos</AccordionTrigger> 
+                  <AccordionContent>
+                    <ul className="space-y-2 pt-5 pl-2 text-2xl">
+                      <li>
+                        <a href="/boxe">
+                          Boxe 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/muaythai">
+                          Muay Thai 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/jiujitsu">
+                          Jiu Jitsu 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/lutalivre">
+                          Luta Livre 
+                        </a>
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </NavItem>
           </ul>
         </nav>
