@@ -3,11 +3,11 @@ const {title, img, imgAlt} = Astro.props;
 ---
 
 <div>
-  <div class="bg-primary flex flex-col items-center mb-8">
+  <div class="bg-primary flex flex-col items-center mb-8 md:container md:mt-[2rem] md:pt-[2rem]">
     <img class="w-full" src={img} alt={imgAlt} />
     <h1 class="text-6xl text-center text-white uppercase py-3 lato-regular tracking-[.2rem]">{title}</h1>
   </div>
-  <div class="content px-6 text-white">
+  <div class="content px-6 text-white md:container md:text-xl">
     <slot/>
   </div>
 </div>

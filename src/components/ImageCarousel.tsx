@@ -21,13 +21,13 @@ function ImageCoursel({ imgs }: CustomCarouselProps) {
     <Carousel opts={{ align: 'start' }}>
       <CarouselContent>
         {imgs.map((img, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="flex justify-center">
             <Dialog>
               <DialogTrigger>
                 <img src={img} />
               </DialogTrigger>
-              <DialogContent className="p-0 border-none">
-                <img src={img} />
+              <DialogContent className="p-0 border-none min-w-[50%]">
+                <img src={img}/>
               </DialogContent>
             </Dialog>
           </CarouselItem>

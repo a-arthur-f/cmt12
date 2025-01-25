@@ -35,44 +35,47 @@ const aulas = [
 	<main class="min-h-full text-white">
     <section>
       <div class="relative">
-        <Image src="/images/background_1.jpg" alt="background" width="429" height="286" class="w-full grayscale brightness-75" />
+        <Image src="/images/background_1.jpg" alt="background" width="429" height="286" class="w-full grayscale brightness-75 md:hidden" />
+        <Image src="/images/background_2.jpg" alt="background" width="429" height="286" class="w-full grayscale brightness-75 hidden md:block" />
         <div class="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center gap-4 text-white px-5 text-center">
-          <h1 class="text-white text-7xl lato-bold">
+          <h1 class="text-white text-7xl lato-bold md:text-9xl">
             CMT 12
           </h1> 
-          <h2 class="lato-regular">
+          <h2 class="lato-regular md:text-xl">
             A MELHOR ESCOLA DE LUTAS DA REGIÃO
           </h2>
         </div>
       </div>
-      <div class="text-center pt-10 px-5">
-        <p class="lato-regular text-lg">
+      <div class="text-center pt-10 px-5 container">
+        <p class="lato-regular text-lg md:text-2xl">
         A CMT12 foi criada pelo Mestre Clayton Mangueira.
  Aqui você aprende e  mantém seu condicionamento físico no Boxe, Muay Thai, MMA, Luta Livre,  Luta Olímpica e Jiu Jitsu.
         </p>
       </div>
     </section>
-    <div class="main-content px-5 pt-16 space-y-16">
+    <div class="main-content px-5 pt-16 md:pt-[8rem] space-y-16 container">
       <section class="space-y-8">
         <h2>NOSSOS TREINOS</h2>
-        {aulas.map(aula => (
-          <Card title={aula.nome} href={aula.nome} img={aula.img}>
-            <div class="flex flex-col gap-8">
-              {aula.horarios.map(horario => (
-                <span 
-                class="text-2xl capitalize 
-                lato-light 
-                py-4
-                rounded-lg 
-                border
-                border-solid 
-                border-white">
-                  {horario}
-                </span>
-              ))}
-            </div>
-          </Card>
-        ))}
+        <div class="space-y-8 md:space-y-0 md:grid md:grid-cols-2 gap-4">
+          {aulas.map(aula => (
+            <Card title={aula.nome} href={aula.nome} img={aula.img}>
+              <div class="flex flex-col gap-8">
+                {aula.horarios.map(horario => (
+                  <span 
+                  class="text-2xl capitalize 
+                  lato-light 
+                  py-4
+                  rounded-lg 
+                  border
+                  border-solid 
+                  border-white">
+                    {horario}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          ))}
+        <div>
       </section>
       <section>
         <h2>NOSSA EQUIPE</h2>

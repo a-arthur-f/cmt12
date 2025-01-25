@@ -24,7 +24,7 @@ function CustomCard({ title, href, img, children }: CustomCardProps) {
       flex flex-col"
     >
       <CardHeader className="p-0 space-y-8 mb-8">
-        <div className="h-[428px] overflow-hidden">
+        <div className="h-[428px] md:h-full md:max-h-[1080px] overflow-hidden">
           <img className="w-full min-h-[428px] aspect-auto" src={img} />
         </div>
         {title && 
