@@ -11,10 +11,11 @@ interface CustomCardProps {
   title?: string;
   href: string;
   img: string;
+  imgDesk?: string;
   children?: React.ReactNode; 
 }
 
-function CustomCard({ title, href, img, children }: CustomCardProps) {
+function CustomCard({ title, href, img, children, imgDesk }: CustomCardProps) {
   return (
     <Card 
       className="border-none 
@@ -25,7 +26,8 @@ function CustomCard({ title, href, img, children }: CustomCardProps) {
     >
       <CardHeader className="p-0 space-y-8 mb-8">
         <div className="h-[428px] md:h-full md:max-h-[840px] overflow-hidden">
-          <img className="aspect-square w-full min-h-[428px] aspect-auto" src={img} />
+          <img className="w-full min-h-[428px] md:hidden" src={img} />
+          <img className="w-full min-h-[428px] md:block" src={imgDesk ? imgDesk : img} />
         </div>
         {title && 
           <CardTitle className="lato-light text-[32px] uppercase px-6">
