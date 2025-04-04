@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.tsx';
 import LocationTabs from '@/components/LocationTabs.tsx';
+import HoursList from '@/components/HoursList.tsx';
 
 const aulas = [
   {
@@ -59,19 +60,8 @@ const aulas = [
         <div class="space-y-8 md:space-y-0 md:grid md:grid-cols-2 gap-4">
           {aulas.map(aula => (
             <Card title={aula.nome} href={aula.nome} img={aula.img}>
-              <div class="flex flex-col gap-8">
-                {aula.horarios.map(horario => (
-                  <span 
-                  class="text-2xl capitalize 
-                  lato-light 
-                  py-4
-                  rounded-lg 
-                  border
-                  border-solid 
-                  border-white">
-                    {horario}
-                  </span>
-                ))}
+              <div>
+                <HoursList hours={aula.horarios} client:load/>
               </div>
             </Card>
           ))}
