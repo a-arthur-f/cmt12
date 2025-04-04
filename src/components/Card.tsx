@@ -22,10 +22,11 @@ function CustomCard({ title, href, img, children, imgDesk }: CustomCardProps) {
       overflow-hidden 
       bg-primary 
       text-white 
-      flex flex-col"
+      flex flex-col
+      h-fit"
     >
       <CardHeader className="p-0 space-y-8 mb-8">
-        <div className="h-[428px] md:h-full md:max-h-[840px] overflow-hidden">
+        <div className="h-[428px] md:h-full md:max-h-[712px] overflow-hidden">
           <img className="w-full min-h-[428px] md:hidden" src={img} />
           <img className="w-full min-h-[428px] md:block" src={imgDesk ? imgDesk : img} />
         </div>
