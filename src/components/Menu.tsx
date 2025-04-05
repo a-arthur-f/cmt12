@@ -42,18 +42,13 @@ function Menu() {
                         </a>
                       </li>
                       <li>
-                        <a href="/muaythai">
-                          Muay Thai 
-                        </a>
-                      </li>
-                      <li>
                         <a href="/jiujitsu">
                           Jiu Jitsu 
                         </a>
                       </li>
                       <li>
-                        <a href="/lutalivre">
-                          Luta Livre 
+                        <a href="/muaythai">
+                          Muay Thai 
                         </a>
                       </li>
                     </ul>
