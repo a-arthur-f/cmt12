@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import InfoPage from '../layouts/InfoPage.astro';
+
+import muaythaiImg from '@/images/muaythai_2.jpg';
 ---
 
 <Layout title="Muay Thai">
-  <InfoPage title="Muay Thai" img="/images/muaythai_2.jpg" imgAlt="Pessoas lutando muay thai">
+  <InfoPage title="Muay Thai" img={muaythaiImg.src} imgAlt="Pessoas lutando muay thai">
     <section>
       <h2 class="text-4xl mb-6">Horários</h2>
         <ul class="flex flex-col gap-4 w-full md:w-96 mt-6 text-center">

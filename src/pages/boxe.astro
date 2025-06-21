@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import InfoPage from '../layouts/InfoPage.astro';
+
+import boxImg from '@/images/box_2.jpg';
 ---
 
 <Layout title="Boxe">
-  <InfoPage title="Boxe" img="/images/box_2.jpg" imgAlt="Boxeador">
+  <InfoPage title="Boxe" img={boxImg.src} imgAlt="Boxeador">
     <section>
       <h2 class="text-4xl mb-6">Horários</h2>
         <ul class="flex flex-col gap-4 w-full md:w-96 mt-6 text-center">

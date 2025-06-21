@@ -5,20 +5,30 @@ import Card from '../components/Card.tsx';
 import LocationTabs from '@/components/LocationTabs.tsx';
 import HoursList from '@/components/HoursList.tsx';
 
+import background1 from '@/images/background_1.jpg';
+import background2 from '@/images/background_2.jpg';
+import boxImg from '@/images/box.jpg';
+import jiujitsuImg from '@/images/jiujitsu.jpg';
+import lutalivreImg from '@/images/lutalivre.jpg';
+import muaythaiImg from '@/images/muaythai.jpg';
+import equipeImg from '@/images/equipe.jpg';
+import mestreImg from '@/images/mestre.jpeg';
+import mestreImgDesk from '@/images/mestre-desk.jpeg';
+
 const aulas = [
   {
     nome: 'boxe',
-    img: '/images/box.jpg',
+    img: boxImg.src,
     horarios: ['terça: 8:30h/18h/19h', 'quinta: 8:30h/18h/19h'],
   },
   {
     nome: 'jiu jitsu',
-    img: '/images/jiujitsu.jpg',
+    img: jiujitsuImg.src,
     horarios: ['terça: 20h', 'terça (kids): 18:30h', 'quinta: 20h', 'quinta (kids): 18:30h']
   },
   {
     nome: 'muay thai',
-    img: '/images/muaythai.jpg',
+    img: muaythaiImg.src,
     horarios: [
       'segunda: 8:30h/18h/19h/20h', 'segunda (kids): 19h', 'terça: 17h', 'quarta: 8:30h/18h/19h/20h',
       'quarta (kids): 19h', 'quinta: 17h'
@@ -26,7 +36,7 @@ const aulas = [
   },
   {
     nome: 'luta livre',
-    img: '/images/lutalivre.jpg',
+    img: lutalivreImg.src,
     horarios: [
       'segunda: 20h',
       'quarta: 20h'
@@ -39,8 +49,8 @@ const aulas = [
 	<main class="min-h-full text-white">
     <section>
       <div class="relative">
-        <Image src="/images/background_1.jpg" alt="background" width="429" height="286" class="w-full grayscale brightness-75 md:hidden" />
-        <Image src="/images/background_2.jpg" alt="background" width="429" height="286" class="w-full grayscale brightness-75 hidden md:block" />
+        <Image src={background1} alt="background" width="429" height="286" class="w-full grayscale brightness-75 md:hidden" />
+        <Image src={background2} alt="background" width="429" height="286" class="w-full grayscale brightness-75 hidden md:block" />
         <div class="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center gap-4 text-white px-5 text-center">
           <h1 class="text-white text-7xl lato-bold md:text-9xl">
             CMT 12
@@ -74,7 +84,7 @@ const aulas = [
       </section>
       <section>
         <h2>NOSSA EQUIPE</h2>
-        <Card title="CMT 12" href="/equipe" img="/images/equipe.jpg">
+        <Card title="CMT 12" href="/equipe" img={equipeImg.src}>
           <div class="text-lg space-y-2 lato-regular md:px-[200px] md:text-xl">
             <p>
             Conheça a nossa equipe. Alunos, professores, mestres, faixas pretas e futuras promessas.
@@ -87,7 +97,7 @@ const aulas = [
       </section>
       <section>
         <h2>NOSSO MESTRE</h2>
-        <Card title="Clayton Mangueira" href="/o-mestre" img="/images/mestre.jpeg" imgDesk="/images/mestre-desk.jpeg">
+        <Card title="Clayton Mangueira" href="/o-mestre" img={mestreImg.src} imgDesk={mestreImgDesk.src}>
         <div class="text-lg space-y-2 lato-regular md:px-[200px] md:text-xl">
           <p>
           Carlos Clayton Araújo de Souza é o nome dele. O apelido "Mangueira" veio após um projeto social no bairro homônimo, na cidade do Rio de Janeiro, onde lecionava artes marciais para crianças carentes da região.

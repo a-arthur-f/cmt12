@@ -1,13 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import InfoPage from '../layouts/InfoPage.astro';
+
+import equipeImg from '@/images/equipe.jpg';
+import mestreImg from '@/images/mestre-2.jpg';
+import bicudoImg from '@/images/bicudo.jpg';
+import charutoImg from '@/images/charuto.jpg';
 ---
 
 <Layout title="A equipe">
-  <InfoPage title="A equipe" img="/images/equipe.jpg" imgAlt="A equipe cmt12">
+<InfoPage title="A equipe" img={equipeImg.src} imgAlt="A equipe cmt12">
   <div class="space-y-5">
     <div class="bg-primary rounded overflow-hidden pb-2 md:pb-8">
-      <img src="/images/mestre-2.jpg" class="w-full m-auto"/>
+      <img src={mestreImg.src} class="w-full m-auto"/>
       <div class="p-4 space-y-3 md:px-[200px]">
         <div class="text-center">
           <h3 class="text-3xl">Clayton Mangueira</h3>   
@@ -41,7 +46,7 @@ import InfoPage from '../layouts/InfoPage.astro';
       </div>
     </div>
     <div class="bg-primary rounded overflow-hidden pb-2 md:pb-8">
-      <img src="/images/bicudo.jpg" class="w-full"/>
+      <img src={bicudoImg.src} class="w-full"/>
       <div class="p-4 space-y-3 md:px-[200px]">
         <div class="text-center">
           <h3 class="text-3xl">Marcos Bicudo Maciel</h3>   
@@ -65,7 +70,7 @@ import InfoPage from '../layouts/InfoPage.astro';
       </div>
     </div>
     <div class="bg-primary rounded overflow-hidden pb-2 md:pb-8">
-      <img src="/images/charuto.jpg" class="w-full"/>
+      <img src={charutoImg.src} class="w-full"/>
       <div class="p-4 space-y-3 md:px-[200px]">
         <div class="text-center">
           <h3 class="text-3xl">Rodrigo Pereira da Silva Charuto</h3>   
